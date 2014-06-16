@@ -1,0 +1,27 @@
+# @file ~/.ssh/config
+# @author Oscar Bezi (oscar@bezi.io)
+# @since 6 June 2014
+#===============================================================================
+
+# pipe multiple connections to a host through one port, speeding up the process
+# also, saves sessions for 10 minutes for speedy reconnect
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+ControlPersist 10m
+
+# aliases
+# biorobotics lab
+host modsnake
+hostname fuego.sbp.ri.cmu.edu
+user odb
+port 7531
+
+# CMU andrew
+host andrew
+hostname unix.andrew.cmu.edu
+user odb
+
+# CMU computer club
+host cclub
+hostname unix.club.cc.cmu.edu
+user odb
