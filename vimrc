@@ -23,3 +23,6 @@ set foldmethod=syntax
 
 " set Arduino to use C++ syntax hilighting
 autocmd BufNewFile,BufReadPost *.ino, *.pde set filetype=cpp
+
+" pathogen
+execute pathogen#infect()
