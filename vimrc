@@ -3,6 +3,10 @@
 " @since 5 June 2014
 "===============================================================================
 
+" pathogen
+execute pathogen#infect()
+filetype plugin indent on
+
 " line numbering
 set nu
 
