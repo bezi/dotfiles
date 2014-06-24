@@ -22,6 +22,7 @@ alias ls='ls --color --group-directories-first';
 alias ll='ls -lhA';
 alias l='ls';
 alias gimme='sudo apt-get install -q -y';
+alias ack='ack-grep';
 
 # adds a location to the ~/.bash_locations
 function add_loc {
