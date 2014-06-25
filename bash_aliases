@@ -15,6 +15,7 @@ alias gpull='git pull';
 alias gpush='git push';
 alias gc='git commit -am';
 alias gs='git status';
+alias glog='git log --color | less -R';
 
 # other shortcuts
 alias m='make';
