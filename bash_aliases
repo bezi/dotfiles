@@ -23,7 +23,6 @@ alias ls='ls --color --group-directories-first';
 alias ll='ls -lhA';
 alias l='ls';
 alias gimme='sudo apt-get install -q -y';
-alias ack='ack-grep';
 
 # adds a location to the ~/.bash_locations
 function add_loc {
@@ -33,6 +32,11 @@ function add_loc {
     echo "# added $DATE" >> ~/.bash_locations;
     echo "alias $NAME='cd $LOCATION';" >> ~/.bash_locations;
     echo "Alias $NAME added to $LOCATION";
+}
+
+# print human-readable location
+function locs {
+    cat ~/.bash_locations  | sed -e "/^#/d" -e "s/='cd /::/" -e "s/';//" | awk '{print $2}'
 }
 
 # colour shortcuts, courtesy of ArchWiki

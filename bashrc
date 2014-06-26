@@ -18,6 +18,9 @@ HISTFILESIZE=2000;
 # check the window size after each command
 shopt -s checkwinsize;
 
+# make less use colors
+export LESS=-RFX;
+
 # set default editor
 export EDITOR="vim";
 

@@ -29,8 +29,6 @@ set foldmethod=syntax
 " set Arduino to use C++ syntax hilighting
 autocmd BufNewFile,BufReadPost *.ino, *.pde set filetype=cpp
 
-" Coming Home To Vim Additions
-"===============================================================================
 " removes vi compatability
 set nocompatible
 
@@ -141,6 +139,9 @@ noremap <leader>q gqip
 
 " reselect recently pasted text
 noremap <leader>v V`]
+
+" open NERDTree
+noremap <leader>n :NERDTree<CR>
 
 " remap jj to escape for easier times
 inoremap jj <ESC>
