@@ -1,0 +1,7 @@
+[user]
+	name = Oscar Bezi
+	email = oscar@bezi.io
+[color]
+	ui = true
+[push]
+	default = simple
