@@ -1,3 +1,0 @@
-[submodule "python_prompt"]
-	path = python_prompt
-	url = git@github.com:bezi/python_prompt.git
