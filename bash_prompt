@@ -6,4 +6,8 @@
 #===============================================================================
 
 # it's a prompt command to make it execute properly every time
-PROMPT_COMMAND='PS1="$(~/.python_prompt/prompt.py $? $COLUMNS)"';
+if [ -f ~/.python_prompt/prompt.py ]; then
+    PROMPT_COMMAND='PS1="$(~/.python_prompt/prompt.py $? $COLUMNS)"';
+else
+    PROMPT_COMMAND='PS1=">"';
+fi
