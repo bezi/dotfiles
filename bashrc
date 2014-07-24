@@ -40,6 +40,7 @@ if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt;
 fi
 
+MODSNAKE_REPO="svn+ssh://odb@modsnake/home/samba/modsnake/SVNROOT"
 # Modsnake firmware toolchain
-export FIRMWARE_EXT_PATH="/home/bezi/dev/modsnake/firmware/ext";
-export PATH="/home/bezi/dev/modsnake/firmware/toolchain/bin:/home/bezi/dev/modsnake/firmware/stlink:$PATH";
+export FIRMWARE_EXT_PATH="/home/bezi/dev/firmware/ext";
+export PATH="/home/bezi/dev/firmware/toolchain/bin:/home/bezi/dev/firmware/stlink:$PATH";

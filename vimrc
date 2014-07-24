@@ -3,19 +3,35 @@
 " @since 5 June 2014
 "===============================================================================
 
-" pathogen
-execute pathogen#infect()
+" Vundle and plugins
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'Shougo/unite.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-commentary'
+Plugin 'Raimondi/delimitMate'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+
+call vundle#end()
 filetype plugin indent on
 
+let g:airline_powerline_fonts=1
 " line numbering
 set nu
 
 " set spacing to use spaces, not tabs, 4 spaces per indent
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
-" turn on mouse control
-" set mouse=a
-" Commented to force me to not use mouse
+" 256 terminal colors to be supa pretty
+set t_Co=256
 
 " put a line at column 81
 set cc=81
@@ -23,16 +39,10 @@ set cc=81
 " syntax hilighting
 syntax enable
 
-" better folding
-set foldmethod=syntax
-
 " set Arduino to use C++ syntax hilighting
 autocmd BufNewFile,BufReadPost *.ino, *.pde set filetype=cpp
 
-" removes vi compatability
-set nocompatible
-
-" removes modelines security exploits 
+" removes modelines security exploits
 set modelines=0
 
 " file encoding
@@ -44,8 +54,8 @@ set scrolloff=3
 " smarter indenting
 set autoindent
 
-" always show what mode we're in
-set showmode
+" airline tells us what mode we're in
+set noshowmode
 
 " show commands while you're typing
 set showcmd
@@ -95,6 +105,10 @@ set incsearch
 set showmatch
 set hlsearch
 
+" Unite.vim remap
+noremap <leader>f :Unite file<cr>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
 " clear out hilighting
 noremap <leader><space> :noh<cr>
 
@@ -118,6 +132,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+inoremap <ESC> <nop>
 
 " make the j and k work better with wrapped text
 noremap j gj
@@ -126,28 +141,11 @@ noremap k gk
 " save whenever you lose focus
 au FocusLost * :wa
 
-" leader commands
-
-" strip trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-" sort CSS properties
-noremap <leader>S ?{<CR>jW/^\s*\}?<CR>k:sort<CR>:noh<CR>
-
 " hard rewrap paragraphs
 noremap <leader>q gqip
 
-" reselect recently pasted text
-noremap <leader>v V`]
-
-" open NERDTree
-noremap <leader>n :NERDTree<CR>
-
 " remap jj to escape for easier times
 inoremap jj <ESC>
-
-" shortcut for vertical split
-nnoremap <leader>w <C-w>v<C-w>l
 
 " navigate splits
 nnoremap <C-h> <C-w>h

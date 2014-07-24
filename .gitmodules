@@ -1,12 +1,6 @@
 [submodule "python_prompt"]
 	path = python_prompt
 	url = git@github.com:bezi/python_prompt.git
-[submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
-	url = git@github.com:digitaltoad/vim-jade.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git
