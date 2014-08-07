@@ -163,3 +163,7 @@ nnoremap <C-l> <C-w>l
 
 " split by default to the right
 set splitright
+
+" put .swp and other backup files in /tmp
+set backupdir=/tmp//
+set dir=/tmp//
