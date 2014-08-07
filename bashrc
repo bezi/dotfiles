@@ -40,7 +40,20 @@ if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt;
 fi
 
+# mechanism to open new terminal in the same place as another terminal without
+# spawning a child terminal.  (I'm sure this is a solved problem but this is my
+# quick hack)  sl _s_aves _l_ocation, and the next terminal opened will be in
+# that directory
+alias sl='pwd > ~/.last_loc'
+if [ -f ~/.last_loc ]; then
+    cd `cat ~/.last_loc`;
+    rm ~/.last_loc;
+fi
+
 MODSNAKE_REPO="svn+ssh://odb@modsnake/home/samba/modsnake/SVNROOT"
 # Modsnake firmware toolchain
 export FIRMWARE_EXT_PATH="/home/bezi/dev/firmware/ext";
 export PATH="/home/bezi/dev/firmware/toolchain/bin:/home/bezi/dev/firmware/stlink:$PATH";
+
+# added color-gcc to a bin directory
+export PATH="$HOME/bin:$PATH";
