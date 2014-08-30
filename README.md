@@ -12,6 +12,7 @@ sudo dpkg -i rcm_1.2.3-1_all.deb;
 rm rcm_1.2.3-1_all.deb;
 ```
 
+Or install with non-dpkg systems [here](https://github.com/thoughtbot/rcm).
 - Clone repo
 ```
 git clone git@github.com:bezi/dotfiles.git ~/.dotfiles;
