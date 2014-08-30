@@ -24,3 +24,5 @@ git submodule update --init --recursive; # get submodules
 lsrc;
 rcup;
 ```
+
+For best results, also install [Sauce Code Powerline](https://github.com/Lokaltog/powerline-fonts/tree/master/SourceCodePro) for vim.
