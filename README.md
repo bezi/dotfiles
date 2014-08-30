@@ -18,6 +18,7 @@ To install locally, change the call to `./configure` to `./configure prefix=$HOM
 ```
 git clone git@github.com:bezi/dotfiles.git ~/.dotfiles;
 cd .dotfiles;
+export RCRC=`pwd`/rcrc; # make rcm use the rcrc you just downloaded for now.
 git submodule update --init --recursive; # get submodules
 ```
 
