@@ -13,6 +13,7 @@ rm rcm_1.2.3-1_all.deb;
 ```
 
 Or install with non-dpkg systems [here](https://github.com/thoughtbot/rcm).
+To install locally, change the call to `./configure` to `./configure prefix=$HOME/` to install to `$HOME/bin`.
 - Clone repo
 ```
 git clone git@github.com:bezi/dotfiles.git ~/.dotfiles;
