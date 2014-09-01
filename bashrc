@@ -6,6 +6,7 @@
 
 # add local directory to the PATH
 export PATH="$PATH:.";
+export PATH="$HOME/bin:$PATH";
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth;
@@ -49,11 +50,4 @@ if [ -f ~/.last_loc ]; then
     cd `cat ~/.last_loc`;
     rm ~/.last_loc;
 fi
-
-MODSNAKE_REPO="svn+ssh://odb@modsnake/home/samba/modsnake/SVNROOT"
-# Modsnake firmware toolchain
-export FIRMWARE_EXT_PATH="/home/bezi/dev/firmware/ext";
-export PATH="/home/bezi/dev/firmware/toolchain/bin:/home/bezi/dev/firmware/stlink:$PATH";
-
-# added color-gcc to a bin directory
-export PATH="$HOME/bin:$PATH";
+source /afs/club.cc.cmu.edu/contrib/etc/bashrc
