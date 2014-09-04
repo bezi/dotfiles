@@ -50,4 +50,7 @@ if [ -f ~/.last_loc ]; then
     cd `cat ~/.last_loc`;
     rm ~/.last_loc;
 fi
-source /afs/club.cc.cmu.edu/contrib/etc/bashrc
+
+if [ -f /afs/club.cc.cmu.edu/contrib/etc/bashrc ]; then
+    source /afs/club.cc.cmu.edu/contrib/etc/bashrc
+fi
