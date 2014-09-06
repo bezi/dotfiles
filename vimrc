@@ -26,6 +26,9 @@ filetype plugin indent on
 
 let g:airline_powerline_fonts=1
 
+"color scheme
+colorscheme monokai
+
 " line numbering
 set nu
 
