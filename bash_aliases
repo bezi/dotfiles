@@ -15,7 +15,7 @@ alias gpull='git pull';
 alias gpush='git push';
 alias gc='git commit -am';
 alias gs='git status';
-alias glog='git log --color | less -R';
+alias glog='git log --pretty=oneline --graph --decorate --abbrev-commit --all';
 
 # other shortcuts
 alias m='make';
@@ -23,7 +23,7 @@ alias ls='ls --color --group-directories-first';
 alias ll='ls -lhA';
 alias l='ls';
 alias gimme='sudo apt-get install -q -y';
-alias tmux='tmux -u';
+alias tmux='tmux -u -2';
 
 # adds a location to the ~/.bash_locations
 function add_loc {

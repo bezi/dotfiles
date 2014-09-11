@@ -25,3 +25,8 @@ user odb
 host cclub
 hostname unix.club.cc.cmu.edu
 user odb
+
+# 213 Shark machines
+host shark
+hostname shark.ics.cs.cmu.edu
+user odb
