@@ -28,5 +28,5 @@ user odb
 
 # 213 Shark machines
 host shark
-hostname shark.ics.cs.cmu.edu
+hostname carpetshark.ics.cs.cmu.edu
 user odb
