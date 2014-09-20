@@ -20,6 +20,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'elzr/vim-json'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 Bundle 'kchmck/vim-coffee-script'
 
 call vundle#end()
@@ -28,7 +29,7 @@ filetype plugin indent on
 let g:airline_powerline_fonts=1
 
 "color scheme
-colorscheme blackdust
+colorscheme elflord
 
 " line numbering
 set nu
