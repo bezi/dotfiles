@@ -21,12 +21,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'elzr/vim-json'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 filetype plugin indent on
 
-let g:airline_powerline_fonts=1
+" use fancy powerline font
+let g:airline_powerline_fonts = 1
+
+" activate rainbow parens
+let g:rainbow_active = 1
 
 "color scheme
 colorscheme elflord
