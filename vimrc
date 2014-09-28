@@ -7,34 +7,65 @@
 set nocompatible
 filetype off
 
+" change leader key
+let mapleader = ","
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Vundle
 Plugin 'gmarik/Vundle.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'Shougo/unite.vim'
+
+" Airline
 Plugin 'bling/vim-airline'
+
+" Autocommenting
 Plugin 'tpope/vim-commentary'
+
+" Parens and brackets galore
 Plugin 'Raimondi/delimitMate'
+
+" Git gutter: Shows a gutter with git diff stuff
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'elzr/vim-json'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'kchmck/vim-coffee-script'
+
+" Rainbow parentheses to help with that jazz
 Plugin 'luochen1990/rainbow'
+
+" Open files easily
+Plugin 'kien/ctrlp.vim'
+
+" Indent hilighting
+Plugin 'Yggdroot/indentLine'
+
+" Coffee-script support
+Plugin 'kchmck/vim-coffee-script'
+
+"Sweet sweet javascript
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
 
-" use fancy powerline font
+" Plugin options
+" Airline
+" use fancy airline font
 let g:airline_powerline_fonts = 1
 
+" DelimitMate
+" activate smarter delimiting
+let delimitMate_expand_cr = 1
+
+" Rainbow
 " activate rainbow parens
 let g:rainbow_active = 1
 
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 "color scheme
-colorscheme elflord
+let g:hybrid_use_Xresources=1
+colorscheme hybrid
 
 " line numbering
 set nu
@@ -51,6 +82,10 @@ set cc=81
 " syntax hilighting
 syntax enable
 
+"edit and source vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 " set Arduino to use C++ syntax hilighting
 autocmd BufNewFile,BufReadPost *.ino set filetype=cpp
 
@@ -65,6 +100,10 @@ set scrolloff=3
 
 " smarter indenting
 set autoindent
+
+" saner indenting
+vnoremap < <gv
+vnoremap > >gv
 
 " airline tells us what mode we're in
 set noshowmode
@@ -97,8 +136,6 @@ set laststatus=2
 " change line numbering to be relative to current line, to make commands easier
 set relativenumber
 
-" change leader key
-let mapleader = ","
 
 " make searching more intuitive by turning off special characters (/&ref
 " searches for &ref)
@@ -118,13 +155,6 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-
-" Unite.vim remap
-noremap <leader>f :Unite file<cr>
-noremap <leader>b :Unite buffer<cr>
-noremap <leader>c :vnew<cr>:Unite file<cr>
-noremap <leader>t :tabe<cr>:Unite file<cr>
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " clear out hilighting from search
 noremap <leader><space> :noh<cr>
