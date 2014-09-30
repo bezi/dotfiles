@@ -40,8 +40,11 @@ Plugin 'Yggdroot/indentLine'
 " Coffee-script support
 Plugin 'kchmck/vim-coffee-script'
 
-"Sweet sweet javascript
+" Sweet sweet javascript
 Plugin 'pangloss/vim-javascript'
+
+" Jade syntax hilighting
+Plugin 'digitaltoad/vim-jade'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,6 +65,9 @@ let g:rainbow_active = 1
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Ignore node_modules
+let g:ctrlp_custom_ignore = 'node_modules'
 
 "color scheme
 let g:hybrid_use_Xresources=1
@@ -207,3 +213,6 @@ set splitright
 " put .swp and other backup files in /tmp
 set backupdir=/tmp//
 set dir=/tmp//
+
+" remap 0 to first non-empty character
+map 0 ^
