@@ -19,11 +19,14 @@ alias glog='git log --pretty=oneline --graph --decorate --abbrev-commit --all';
 
 # other shortcuts
 alias m='make';
+alias mc='make clean';
 alias ls='ls --color --group-directories-first';
 alias ll='ls -lhA';
 alias l='ls';
 alias gimme='sudo apt-get install -q -y';
 alias tmux='tmux -u -2';
+alias eb='vim ~/.bashrc';
+alias sb='source ~/.bashrc';
 
 # adds a location to the ~/.bash_locations
 function add_loc {
