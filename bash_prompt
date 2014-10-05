@@ -1,13 +1,40 @@
 #!/bin/bash
 # @file ~/.bash_prompt
-# @brief sets my custom bash prompt to execute the Python prompt
+# @brief sets my custom bash prompt
 # @author Oscar Bezi (oscar@bezi.io)
 # @since 5 June 2014
 #===============================================================================
 
+# Prints out the prompt
+function bash_prompt {
+    if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+        if git diff --quiet; then
+            # clean repo
+            GIT_COLOR="${BGreen}"
+        else
+            #dirty repo
+            GIT_COLOR="${BRed}"
+        fi
+        GIT_REPO="$(git rev-parse --show-toplevel)"
+        GIT_REPO="${GIT_REPO##*/}"
+        GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)";
+        GIT="${BWhite}(${GIT_COLOR}${GIT_REPO}${BWhite} → ${GIT_COLOR}${GIT_BRANCH}${BWhite}) "
+    fi
+
+    if [[ "${1}" != "0" ]]; then
+        STATUS="${BRed}✗ ";
+    fi
+
+    if [ "${PWD}" != "${HOME}" ]; then
+        LOCATION="${BBlue} > ${BYellow}${PWD##*/}";
+    fi
+
+    PROMPT="${STATUS}${GIT}${BYellow}${USER}${LOCATION} ${BBlue}λ ${Color_Off}";
+
+    # overwrite instances of .github.io with character, makes it shorter
+    PROMPT="${PROMPT//.github.io/.ᘠ}";
+    printf "$PROMPT";
+}
+
 # it's a prompt command to make it execute properly every time
-if [ -f ~/.python_prompt/prompt.py ]; then
-    PROMPT_COMMAND='PS1="$(python2.7 ~/.python_prompt/prompt.py $? $COLUMNS)"';
-else
-    PROMPT_COMMAND='PS1=">"';
-fi
+PROMPT_COMMAND='PS1="$(bash_prompt $?)"';
