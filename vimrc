@@ -46,6 +46,12 @@ Plugin 'pangloss/vim-javascript'
 " Jade syntax hilighting
 Plugin 'digitaltoad/vim-jade'
 
+" Hilights colours in CSS/Sass files
+Plugin 'ap/vim-css-color'
+
+" Hilight trailing whitespace
+Plugin 'ntpeters/vim-better-whitespace'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -68,6 +74,9 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" Trailing whitespace
+nmap <silent> <leader>w :StripWhitespace<CR> :w<CR>
 
 "color scheme
 let g:hybrid_use_Xresources=1
@@ -106,10 +115,6 @@ set scrolloff=3
 
 " smarter indenting
 set autoindent
-
-" saner indenting
-vnoremap < <gv
-vnoremap > >gv
 
 " airline tells us what mode we're in
 set noshowmode
