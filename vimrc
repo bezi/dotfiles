@@ -52,6 +52,10 @@ Plugin 'ap/vim-css-color'
 " Hilight trailing whitespace
 Plugin 'ntpeters/vim-better-whitespace'
 
+" Improved markdown support
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -215,9 +219,15 @@ nnoremap <C-l> <C-w>l
 " split by default to the right
 set splitright
 
-" put .swp and other backup files in /tmp
-set backupdir=/tmp//
-set dir=/tmp//
+" Turn off extra back up files.  I find them to be annoying and I save enough
+" that they're more of a nuisance when recovering from a crash than anything
+" else
+
+" don't use swap files
+set noswapfile
+
+" don't use backup files (a.c~)
+set nobackup
 
 " remap 0 to first non-empty character
 map 0 ^
