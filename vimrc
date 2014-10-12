@@ -56,6 +56,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Docker
+Plugin 'ekalinin/Dockerfile.vim'
+
 call vundle#end()
 filetype plugin indent on
 
