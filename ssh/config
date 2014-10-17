@@ -30,3 +30,18 @@ user odb
 host shark
 hostname carpetshark.ics.cs.cmu.edu
 user odb
+
+# unix.bezi.io
+host unix
+hostname unix.bezi.io
+user bezi
+
+# dev.bezi.io
+host dev
+hostname dev.bezi.io
+user bezi
+
+# prod.bezi.io
+host prod
+hostname prod.bezi.io
+user bezi
