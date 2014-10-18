@@ -52,5 +52,5 @@ if [ -f ~/.last_loc ]; then
 fi
 
 if [ -f /afs/club.cc.cmu.edu/contrib/etc/bashrc ]; then
-    source /afs/club.cc.cmu.edu/contrib/etc/bashrc
+    source /afs/club.cc.cmu.edu/contrib/etc/bashrc;
 fi
