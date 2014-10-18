@@ -29,7 +29,9 @@ function bash_prompt {
         LOCATION="${BBlue} > ${BYellow}${PWD##*/}";
     fi
 
-    PROMPT="${STATUS}${GIT}${BYellow}${USER}${LOCATION} ${BBlue}λ ${Color_Off}";
+    PROMPT="${STATUS}${GIT}"
+    PROMPT="${PROMPT}${BYellow}${USER}${BWhite}@${BYellow}${HOSTNAME}"
+    PROMPT="${PROMPT}${LOCATION} ${BBlue}λ ${Color_Off}";
 
     # overwrite instances of .github.io with character, makes it shorter
     PROMPT="${PROMPT//.github.io/.ᘠ}";
