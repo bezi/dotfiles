@@ -37,18 +37,6 @@ Plugin 'kien/ctrlp.vim'
 " Indent hilighting
 Plugin 'Yggdroot/indentLine'
 
-" Coffee-script support
-Plugin 'kchmck/vim-coffee-script'
-
-" Sweet sweet javascript
-Plugin 'pangloss/vim-javascript'
-
-" Jade syntax hilighting
-Plugin 'digitaltoad/vim-jade'
-
-" Hilights colours in CSS/Sass files
-Plugin 'ap/vim-css-color'
-
 " Hilight trailing whitespace
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -56,7 +44,22 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-" Docker
+" CTags
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+
+" Syntastic
+Plugin 'scrooloose/syntastic'
+
+" HTML/XML autoclose tags
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+
+" Syntax hilighting
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
@@ -78,6 +81,17 @@ let g:rainbow_active = 1
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+nmap <silent> <leader>. :CtrlPTag<CR>
+
+" Tagbar
+nmap <silent> <leader>b :TagbarToggle<CR>
+
+" EasyTags
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+
+" Syntastic
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules'
@@ -87,7 +101,7 @@ nmap <silent> <leader>w :StripWhitespace<CR> :w<CR>
 
 "color scheme
 let g:hybrid_use_Xresources=1
-colorscheme hybrid
+colorscheme monokai
 
 " line numbering
 set nu
