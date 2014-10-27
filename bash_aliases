@@ -27,6 +27,7 @@ alias gimme='sudo apt-get install -q -y';
 alias tmux='tmux -u -2';
 alias eb='vim ~/.bashrc';
 alias sb='source ~/.bashrc';
+alias reload='source ~/.bashrc';
 
 # adds a location to the ~/.bash_locations
 function add_loc {
