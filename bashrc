@@ -41,16 +41,6 @@ if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt;
 fi
 
-# mechanism to open new terminal in the same place as another terminal without
-# spawning a child terminal.  (I'm sure this is a solved problem but this is my
-# quick hack)  sl _s_aves _l_ocation, and the next terminal opened will be in
-# that directory
-alias sl='pwd > ~/.last_loc'
-if [ -f ~/.last_loc ]; then
-    cd `cat ~/.last_loc`;
-    rm ~/.last_loc;
-fi
-
 if [ -f /afs/club.cc.cmu.edu/contrib/etc/bashrc ]; then
     source /afs/club.cc.cmu.edu/contrib/etc/bashrc;
 fi
