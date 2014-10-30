@@ -13,7 +13,11 @@ source ~/.vim_plugins.vim
 nmap <silent> <leader>w :StripWhitespace<CR> :w<CR>
 
 " color scheme
-colorscheme monokai
+colorscheme kalisi
+set background=dark
+
+" I like this more than the kalisi theme for airline
+let g:airline_theme='molokai'
 
 " line numbering
 set nu
