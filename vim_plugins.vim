@@ -60,6 +60,9 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
 
+" Colors galore
+Plugin 'tomasr/molokai'
+
 call vundle#end()
 filetype plugin indent on
 

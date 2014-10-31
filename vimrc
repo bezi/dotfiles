@@ -13,7 +13,7 @@ source ~/.vim_plugins.vim
 nmap <silent> <leader>w :StripWhitespace<CR> :w<CR>
 
 " color scheme
-colorscheme kalisi
+colorscheme molokai
 set background=dark
 
 " I like this more than the kalisi theme for airline
