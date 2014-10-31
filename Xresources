@@ -1,30 +1,74 @@
-! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
-! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
-! vim: ft=xdefaults
+!-------------------------------------------------------------------------------
+!@file ~/.Xresources
+!@brief Visual configuration of my visual environment
+!@author Oscar Bezi, oscar@bezi.io
+!@since 31 October 2014
 
-*background: #1D1F21
-*foreground: #C5C8C6
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #191919
+*foreground: #ffffff
+
+! --- standard colors ---
+
 ! black
-*color0: #282A2E
-*color8: #373B41
+*color0: #191919
+
+! bright_black
+*color8: #535353
+
 ! red
-*color1: #A54242
-*color9: #CC6666
+*color1: #d5418b
+
+! bright_red
+*color9: #edaccc
+
 ! green
-*color2: #8C9440
-*color10: #B5BD68
+*color2: #8bd541
+
+! bright_green
+*color10: #ccedac
+
 ! yellow
-*color3: #DE935F
-*color11: #F0C674
+*color3: #d58b41
+
+! bright_yellow
+*color11: #edccac
+
 ! blue
-*color4: #5F819D
-*color12: #81A2BE
+*color4: #418bd5
+
+! bright_blue
+*color12: #accced
+
 ! magenta
-*color5: #85678F
-*color13: #B294BB
+*color5: #8b41d5
+
+! bright_magenta
+*color13: #ccaced
+
 ! cyan
-*color6: #5E8D87
-*color14: #8ABEB7
+*color6: #41d58b
+
+! bright_cyan
+*color14: #acedcc
+
 ! white
-*color7: #707880
-*color15: #C5C8C6
+*color7: #e0e0e0
+
+! bright_white
+*color15: #ffffff
+
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------
+
+xterm*faceName: Menlo for Powerline:size=10:antialias=false
+xterm*font: 7x13
