@@ -1,0 +1,60 @@
+! Black
+*color0:                              #252525
+*color8:                              #454545
+! Red
+*color1:							  #BF3F34
+*color9:                              #EF545F
+! Green
+*color2:                              #705D22
+*color10:                             #B8AA4B
+! Yellow
+*color3:                              #CD7860
+*color11:                             #E88773
+! Blue
+*color4:                              #627A92
+*color12:			                  #88a1ba
+! Magenta
+*color5:                              #917154
+*color13:                             #989584
+! Cyan
+*color6:                              #767D75
+*color14:                             #9DA69E
+! White
+*color7:                              #C2C2A8
+*color15:                             #DBDAC1
+
+*cursorColor:                         #917154
+
+URxvt*foreground:                     #eddcd3
+URxvt*background:                     #121212
+
+*TkTheme: clearlooks
+
+! Xft settings ---------------------------------------------------------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    slight
+Xft.autohint:   0
+Xft.lcdfilter:  lcddefault
+
+! urxvt ----------------------------------------------------------------------
+URxvt.letterSpace:			-1
+URxvt.font: xft:Menlo for Powerline:size=10
+
+URxvt.xftAntialias:     	false
+URxvt*saveLines:        	12000
+URxvt*visualBell:       	true
+URxvt*urgentOnBell:     	true
+URxvt*scrollBar:        	false
+URxvt*loginShell:       	true
+URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*url-select.launcher:	/usr/bin/chromium
+URxvt*matcher.button:		1
+URxvt*colorUL:          	2
+URxvt*cutchars:         	`""()'*'<>[]{|}
+URxvt*underlineURLs:    	true
+URxvt*url-select.underline: true
+URxvt*termName:				rxvt-256color
+URxvt*internalBorder:       5
+URxvt*externalBorder:       0
