@@ -44,7 +44,6 @@ URxvt.font: xft:Menlo for Powerline:size=10
 
 URxvt.xftAntialias:     	false
 URxvt*saveLines:        	12000
-URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
 URxvt*scrollBar:        	false
 URxvt*loginShell:       	true

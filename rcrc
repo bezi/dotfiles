@@ -1,2 +1,2 @@
-SYMLINK_DIRS="vim python_prompt i3"
+SYMLINK_DIRS="vim python_prompt i3 fonts"
 EXCLUDES="README.md"
