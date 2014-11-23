@@ -1,34 +1,52 @@
-! Black
-*color0:                              #252525
-*color8:                              #454545
-! Red
-*color1:							  #BF3F34
-*color9:                              #EF545F
-! Green
-*color2:                              #705D22
-*color10:                             #B8AA4B
-! Yellow
-*color3:                              #CD7860
-*color11:                             #E88773
-! Blue
-*color4:                              #627A92
-*color12:			                  #88a1ba
-! Magenta
-*color5:                              #917154
-*color13:                             #989584
-! Cyan
-*color6:                              #767D75
-*color14:                             #9DA69E
-! White
-*color7:                              #C2C2A8
-*color15:                             #DBDAC1
+! Base16 Monokai colors
 
-*cursorColor:                         #917154
+#define base00 #272822
+#define base01 #383830
+#define base02 #49483e
+#define base03 #75715e
+#define base04 #a59f85
+#define base05 #f8f8f2
+#define base06 #f5f4f1
+#define base07 #f9f8f5
+#define base08 #f92672
+#define base09 #fd971f
+#define base0A #f4bf75
+#define base0B #a6e22e
+#define base0C #a1efe4
+#define base0D #66d9ef
+#define base0E #ae81ff
+#define base0F #cc6633
 
-URxvt*foreground:                     #eddcd3
-URxvt*background:                     #121212
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
 
-*TkTheme: clearlooks
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -48,7 +66,7 @@ URxvt*urgentOnBell:     	true
 URxvt*scrollBar:        	false
 URxvt*loginShell:       	true
 URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
-URxvt*url-select.launcher:	/usr/bin/chromium
+URxvt*url-select.launcher:	/usr//chromium
 URxvt*matcher.button:		1
 URxvt*colorUL:          	2
 URxvt*cutchars:         	`""()'*'<>[]{|}

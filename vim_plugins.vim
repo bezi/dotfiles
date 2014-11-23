@@ -50,6 +50,11 @@ Plugin 'majutsushi/tagbar'
 " Syntastic
 Plugin 'scrooloose/syntastic'
 
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'othree/tern_for_vim_coffee'
+
 " HTML/XML autoclose tags
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 
@@ -93,6 +98,11 @@ let g:easytags_events = ['BufReadPost', 'BufWritePost']
 " Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
+
+nmap <silent> <leader>e :Errors<CR>
+
+" YCM
+let g:ycm_confirm_extra_conf = 0
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules'

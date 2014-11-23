@@ -134,8 +134,11 @@ bar {
 
 # set bg image
 exec --no-startup-id feh --bg-scale ~/.i3/bg.jpg
+exec --no-startup-id compton --config ~/.config/compton.conf
 
 # The following is courtesy of benkaiser on github
 # dynamic workspace naming
 bindsym $mod+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/go_to_workspace.py
 bindsym $mod+Shift+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/move_to_workspace.py
+
+new_window pixel 3
