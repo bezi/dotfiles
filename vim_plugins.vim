@@ -50,11 +50,6 @@ Plugin 'majutsushi/tagbar'
 " Syntastic
 Plugin 'scrooloose/syntastic'
 
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'othree/tern_for_vim_coffee'
-
 " HTML/XML autoclose tags
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 

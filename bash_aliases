@@ -28,6 +28,7 @@ alias tmux='tmux -u -2';
 alias eb='vim ~/.bashrc';
 alias sb='source ~/.bashrc';
 alias reload='source ~/.bashrc';
+alias vim_reload='vim +PluginClean +PluginInstall +qall';
 
 # adds a location to the ~/.bash_locations
 function add_loc {
