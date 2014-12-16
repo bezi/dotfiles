@@ -59,6 +59,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'evanmiller/nginx-vim-syntax'
 
 " Colors galore
 Plugin 'tomasr/molokai'
