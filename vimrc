@@ -163,3 +163,6 @@ set nobackup
 
 " remap 0 to first non-empty character
 map 0 ^
+
+" write to a file with sudo
+command Sudow w !sudo tee % > /dev/null
