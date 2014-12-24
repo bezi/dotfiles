@@ -24,7 +24,6 @@ alias ls='ls --color --group-directories-first';
 alias ll='ls -lhA';
 alias l='ls';
 alias gimme='sudo apt-get install -q -y';
-alias tmux='tmux -u -2';
 alias eb='vim ~/.bashrc';
 alias sb='source ~/.bashrc';
 alias reload='source ~/.bashrc';
