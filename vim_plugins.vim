@@ -50,6 +50,9 @@ Plugin 'majutsushi/tagbar'
 " Syntastic
 Plugin 'scrooloose/syntastic'
 
+" Tmuxline
+Plugin 'edkolev/tmuxline.vim'
+
 " HTML/XML autoclose tags
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 
