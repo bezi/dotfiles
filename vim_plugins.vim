@@ -50,9 +50,6 @@ Plugin 'majutsushi/tagbar'
 " Syntastic
 Plugin 'scrooloose/syntastic'
 
-" HTML/XML autoclose tags
-Plugin 'vim-scripts/HTML-AutoCloseTag'
-
 " Syntax hilighting
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
@@ -61,6 +58,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Keithbsmiley/tmux.vim'
+Plugin 'chilicuil/vim-sml-coursera'
 
 " Colors galore
 Plugin 'tomasr/molokai'
@@ -100,6 +98,10 @@ nmap <silent> <leader>e :Errors<CR>
 
 " YCM
 let g:ycm_confirm_extra_conf = 0
+
+" Indent hilighting for some reason causes a bug with latex
+let g:indentLine_fileTypeExclude = ['tex']
+au Filetype tex setlocal conceallevel=0
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules'

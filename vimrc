@@ -10,7 +10,7 @@ let mapleader = ","
 source ~/.vim_plugins.vim
 
 " Trailing whitespace
-nmap <silent> <leader>w :StripWhitespace<CR> :w<CR>
+nmap <silent> <leader>w :StripWhitespace<CR> :%s/\n\{3,}/\r\r/e<CR> :w<CR>
 
 " color scheme
 colorscheme molokai
