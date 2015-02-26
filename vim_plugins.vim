@@ -39,6 +39,13 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Super pane navigation
+Plugin 'christoomey/vim-tmux-navigator'
+
+" NerdTREE
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " Syntax hilighting
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
@@ -48,8 +55,10 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Keithbsmiley/tmux.vim'
 Plugin 'cypok/vim-sml'
+
 " Colors galore
 Plugin 'tomasr/molokai'
+Plugin 'idbrii/vim-sandydune'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,6 +73,11 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" NERDTree
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Indent hilighting for some reason causes a bug with latex
 let g:indentLine_fileTypeExclude = ['tex']
