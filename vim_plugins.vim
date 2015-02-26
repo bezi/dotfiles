@@ -47,7 +47,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Keithbsmiley/tmux.vim'
-
+Plugin 'cypok/vim-sml'
 " Colors galore
 Plugin 'tomasr/molokai'
 
