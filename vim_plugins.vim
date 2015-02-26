@@ -14,9 +14,6 @@ call vundle#begin()
 " Vundle
 Plugin 'gmarik/Vundle.vim'
 
-" Airline
-Plugin 'bling/vim-airline'
-
 " Autocommenting
 Plugin 'tpope/vim-commentary'
 
@@ -42,14 +39,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-" CTags
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-
-" Syntastic
-Plugin 'scrooloose/syntastic'
-
 " Syntax hilighting
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
@@ -58,7 +47,6 @@ Plugin 'ap/vim-css-color'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Keithbsmiley/tmux.vim'
-Plugin 'chilicuil/vim-sml-coursera'
 
 " Colors galore
 Plugin 'tomasr/molokai'
@@ -66,42 +54,37 @@ Plugin 'tomasr/molokai'
 call vundle#end()
 filetype plugin indent on
 
-" Plugin options
-" Airline
-" use fancy airline font
-let g:airline_powerline_fonts = 1
-
 " DelimitMate
 " activate smarter delimiting
 let delimitMate_expand_cr = 1
 
-" Rainbow
-" activate rainbow parens
-let g:rainbow_active = 1
-
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-nmap <silent> <leader>. :CtrlPTag<CR>
 
-" Tagbar
-nmap <silent> <leader>b :TagbarToggle<CR>
-
-" EasyTags
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-
-" Syntastic
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-
-nmap <silent> <leader>e :Errors<CR>
-
-" YCM
-let g:ycm_confirm_extra_conf = 0
+" Ignore node_modules
+let g:ctrlp_custom_ignore = 'node_modules'
 
 " Indent hilighting for some reason causes a bug with latex
 let g:indentLine_fileTypeExclude = ['tex']
 au Filetype tex setlocal conceallevel=0
 
-" Ignore node_modules
-let g:ctrlp_custom_ignore = 'node_modules'
+" Rainbow
+" activate rainbow parens
+let g:rainbow_active = 1
+
+let g:rainbow_conf = {
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '_,_',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '*': {},
+    \       'tex': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\(/ end=/\)/', 'start=/\[/ end=/\]/'],
+    \       },
+    \       'html': 0,
+    \       'sml': {
+    \           'parentheses': ['start=/(\(\*\)\@!/ end=/\(\*\)\@<!)/', 'start=/\[/ end=/\]/ fold']
+    \       }
+    \   }
+    \}

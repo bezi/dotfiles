@@ -16,9 +16,6 @@ nmap <silent> <leader>w :StripWhitespace<CR> :%s/\n\{3,}/\r\r/e<CR> :w<CR>
 colorscheme molokai
 set background=dark
 
-" I like this more than the kalisi theme for airline
-let g:airline_theme='molokai'
-
 " line numbering
 set nu
 
@@ -163,6 +160,3 @@ set nobackup
 
 " remap 0 to first non-empty character
 map 0 ^
-
-" write to a file with sudo
-command Sudow w !sudo tee % > /dev/null
