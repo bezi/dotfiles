@@ -31,6 +31,11 @@ set cc=81
 " syntax hilighting
 syntax enable
 
+" mice are cool
+if has('mouse')
+    set mouse=a
+endif
+
 " edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>

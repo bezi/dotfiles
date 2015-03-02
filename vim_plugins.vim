@@ -42,9 +42,17 @@ Plugin 'plasticboy/vim-markdown'
 " Super pane navigation
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Syntastic
+Plugin 'scrooloose/syntastic'
+
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+" Tagbar
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
 
 " Syntax hilighting
 Plugin 'kchmck/vim-coffee-script'
@@ -65,7 +73,23 @@ filetype plugin indent on
 
 " DelimitMate
 " activate smarter delimiting
-let delimitMate_expand_cr = 1
+let delimitMate_expand_cr = 2
+let delimitMate_expand_inside_quotes = 1
+let delimitMate_expand_space = 1
+
+augroup beziDelimitMate
+    au!
+    au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+augroup END
+
+" Syntastic
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+
+augroup beziSyntastic
+    au!
+    au FileType tes let b:syntastic_mode = "passive"
+augroup END
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -93,12 +117,22 @@ let g:rainbow_conf = {
     \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
     \   'separately': {
     \       '*': {},
-    \       'tex': {
-    \           'parentheses': ['start=/(/ end=/)/', 'start=/\(/ end=/\)/', 'start=/\[/ end=/\]/'],
-    \       },
     \       'html': 0,
     \       'sml': {
     \           'parentheses': ['start=/(\(\*\)\@!/ end=/\(\*\)\@<!)/', 'start=/\[/ end=/\]/ fold']
     \       }
     \   }
     \}
+
+
+" CTags stuff, jacked it from Jake (github.com/jez)
+" Open/close tagbar with \b
+nmap <silent> <leader>b :TagbarToggle<CR>
+autocmd BufEnter * nested :call tagbar#autoopen(0)
+
+set tags=./tags;,~/.vimtags
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 2
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1

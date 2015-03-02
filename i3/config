@@ -142,3 +142,6 @@ bindsym $mod+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/go_to_work
 bindsym $mod+Shift+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/move_to_workspace.py
 
 new_window pixel 3
+
+gaps inner 5
+gaps outer 5
