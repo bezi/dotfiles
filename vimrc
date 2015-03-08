@@ -55,9 +55,6 @@ set scrolloff=3
 " smarter indenting
 set autoindent
 
-" airline tells us what mode we're in
-set noshowmode
-
 " show commands while you're typing
 set showcmd
 

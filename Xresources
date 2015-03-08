@@ -1,52 +1,41 @@
-! Base16 Monokai colors
+! Molokai theme
+URxvt*background: #101010
+URxvt*foreground: #d0d0d0
+URxvt*color0: #101010
+URxvt*color1: #960050
+URxvt*color2: #66aa11
+URxvt*color3: #c47f2c
+URxvt*color4: #30309b
+URxvt*color5: #7e40a5
+URxvt*color6: #3579a8
+URxvt*color7: #9999aa
+URxvt*color8: #303030
+URxvt*color9: #ff0090
+URxvt*color10: #80ff00
+URxvt*color11: #ffba68
+URxvt*color12: #5f5fee
+URxvt*color13: #bb88dd
+URxvt*color14: #4eb4fa
+URxvt*color15: #d0d0d0
 
-#define base00 #272822
-#define base01 #383830
-#define base02 #49483e
-#define base03 #75715e
-#define base04 #a59f85
-#define base05 #f8f8f2
-#define base06 #f5f4f1
-#define base07 #f9f8f5
-#define base08 #f92672
-#define base09 #fd971f
-#define base0A #f4bf75
-#define base0B #a6e22e
-#define base0C #a1efe4
-#define base0D #66d9ef
-#define base0E #ae81ff
-#define base0F #cc6633
-
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+*xterm*background: #101010
+*xterm*foreground: #d0d0d0
+*xterm*cursorColor: #d0d0d0
+*xterm*color0: #101010
+*xterm*color1: #960050
+*xterm*color2: #66aa11
+*xterm*color3: #c47f2c
+*xterm*color4: #30309b
+*xterm*color5: #7e40a5
+*xterm*color6: #3579a8
+*xterm*color7: #9999aa
+*xterm*color8: #303030
+*xterm*color9: #ff0090
+*xterm*color10: #80ff00
+*xterm*color11: #ffba68
+*xterm*color12: #5f5fee
+*xterm*color13: #bb88dd
+*xterm*color14: #4eb4fa
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -75,3 +64,10 @@ URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
 URxvt*internalBorder:       5
 URxvt*externalBorder:       0
+URxvt*visualBell:           false
+
+! Xterm settings
+xterm*termName: xterm-256color
+xterm*locale: true
+xterm*faceName: xft:Menlo for Powerline:size=10
+xterm*font: 7x13
