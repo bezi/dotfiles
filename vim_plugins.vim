@@ -68,6 +68,9 @@ Plugin 'cypok/vim-sml'
 Plugin 'tomasr/molokai'
 Plugin 'idbrii/vim-sandydune'
 
+" Hardmode to break some bad habits
+Plugin 'takac/vim-hardtime'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -128,11 +131,13 @@ let g:rainbow_conf = {
 " CTags stuff, jacked it from Jake (github.com/jez)
 " Open/close tagbar with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
-autocmd BufEnter * nested :call tagbar#autoopen(0)
 
-set tags=./tags;,~/.vimtags
+set tags=./.vimtags;,~/.vimtags
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
+
+" Hardtime customisation
+let g:hardtime_default_on = 1

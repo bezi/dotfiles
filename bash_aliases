@@ -30,6 +30,7 @@ alias reload='source ~/.bashrc';
 alias vim_reload='vim +PluginClean +PluginInstall +qall';
 alias dotfiles_reload='cd ~/.dotfiles; gpull; rcup; reload; vim_reload; cd --;';
 alias tmux='tmux -2';
+alias smlnj='rlwrap sml'
 
 # adds a location to the ~/.bash_locations
 function add_loc {
