@@ -26,9 +26,6 @@ Plugin 'airblade/vim-gitgutter'
 " Rainbow parentheses to help with that jazz
 Plugin 'luochen1990/rainbow'
 
-" Open files easily
-Plugin 'kien/ctrlp.vim'
-
 " Indent hilighting
 Plugin 'Yggdroot/indentLine'
 
@@ -71,7 +68,6 @@ Plugin 'cypok/vim-sml'
 
 " Colors galore
 Plugin 'tomasr/molokai'
-Plugin 'idbrii/vim-sandydune'
 
 " Hardmode to break some bad habits
 Plugin 'takac/vim-hardtime'
@@ -126,6 +122,7 @@ let g:rainbow_conf = {
     \   'separately': {
     \       '*': {},
     \       'html': 0,
+    \       'css': 0,
     \       'sml': {
     \           'parentheses': ['start=/(\(\*\)\@!/ end=/\(\*\)\@<!)/', 'start=/\[/ end=/\]/ fold']
     \       }
