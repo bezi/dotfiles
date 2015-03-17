@@ -45,6 +45,11 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Syntastic
 Plugin 'scrooloose/syntastic'
 
+" Omnicomplete family
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'SirVer/ultisnips'
+
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -67,6 +72,9 @@ Plugin 'cypok/vim-sml'
 " Colors galore
 Plugin 'tomasr/molokai'
 Plugin 'idbrii/vim-sandydune'
+
+" Hardmode to break some bad habits
+Plugin 'takac/vim-hardtime'
 
 call vundle#end()
 filetype plugin indent on
@@ -128,11 +136,33 @@ let g:rainbow_conf = {
 " CTags stuff, jacked it from Jake (github.com/jez)
 " Open/close tagbar with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
-autocmd BufEnter * nested :call tagbar#autoopen(0)
 
-set tags=./tags;,~/.vimtags
+set tags=./.vimtags;,~/.vimtags
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
+
+" Easytags config
+let g:tagbar_type_tex = {
+    \ 'ctagstype' : 'tex',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics:0:0',
+        \ 'l:labels',
+        \ 'r:refs:1:0',
+        \ 'p:pagerefs:1:0'
+    \ ],
+    \ 'sort'    : 0,
+\ }
+
+" Hardtime customisation
+let g:hardtime_default_on = 1
+
+" Ultisnips
+let g:UltiSnipsEditSplit="vertical"
+
+" YouCompleteMe
+let g:ycm_filetype_whitelist = { '*': 1 }
+let g:ycm_filetype_blacklist = { 'markdown': 1, 'tagbar': 1, 'tex': 1, 'nerdtree': 1 }

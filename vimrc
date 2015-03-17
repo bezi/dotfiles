@@ -36,10 +36,6 @@ if has('mouse')
     set mouse=a
 endif
 
-" edit and source vimrc
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
 " set Arduino to use C++ syntax hilighting
 autocmd BufNewFile,BufReadPost *.ino set filetype=cpp
 
@@ -162,3 +158,7 @@ set nobackup
 
 " remap 0 to first non-empty character
 map 0 ^
+
+" centering macros to make searching a pleasure
+nmap n nzz
+nmap N Nzz
