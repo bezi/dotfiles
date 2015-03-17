@@ -71,3 +71,4 @@ xterm*termName: xterm-256color
 xterm*locale: true
 xterm*faceName: xft:Menlo for Powerline:size=10
 xterm*font: 7x13
+xterm*selectToClipboard: true
