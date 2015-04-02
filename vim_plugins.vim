@@ -163,3 +163,7 @@ let g:UltiSnipsEditSplit="vertical"
 " YouCompleteMe
 let g:ycm_filetype_whitelist = { '*': 1 }
 let g:ycm_filetype_blacklist = { 'markdown': 1, 'tagbar': 1, 'tex': 1, 'nerdtree': 1 }
+
+" SML for days
+" SML signature files
+au BufRead,BufNewFile *.sig setlocal filetype=sml
