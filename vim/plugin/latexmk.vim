@@ -10,16 +10,17 @@ function! LatexMakeFunction()
 
     " go to the file, check if there's a makefile and run make, or just run
     " pdflatex
-    !cd %:h && if [-f Makefile ]; then make; else pdflatex %; fi<cr>
+    !cd %:h && if [-f Makefile ]; then make; else pdflatex %; fi
 
-end
+endfunction
 
 command! LatexMake call LatexMakeFunction()
 
 function! LatexViewFunction()
     " pull up evince and pipe errors to /dev/null since it generates a ton of
     " messages
-    silent !evince %:r.pdf 2>/dev/null &<cr>
-end
+    silent !evince %:r.pdf 2>/dev/null &
+
+endfunction
 
 command! LatexView call LatexViewFunction()
