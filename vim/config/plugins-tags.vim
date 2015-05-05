@@ -30,8 +30,7 @@ let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
 "-------------------------------------------------------------------------------
-" TagBar: This plugin generates ctags every time I save the file.  Then I can
-" browse them with the native Vim keybindings, or use the tagbar to view them.
+" TagBar: Lets me view ctags in a nice side bar with clickable tag jumps.
 "-------------------------------------------------------------------------------
 Plugin 'majutsushi/tagbar'
 
