@@ -25,5 +25,8 @@ nmap <silent> <leader>b :TagbarToggle<cr>
 nmap <silent> <leader>w :StripWhitespace<cr> :%s/\n\{3,}/\r\r/e<cr> :w<cr>
 
 " Latex build and make, they're in plugin/latexmk.vim
-nmap <silent> <leader>m :LatexMake<cr>
-nmap <silent> <leader>v :LatexView<cr>
+augroup beziLatexLeader
+    au!
+    au FileType tex nmap <buffer> <silent> <leader>m :LatexMake<cr>
+    au FileType tex nmap <buffer> <silent> <leader>v :LatexView<cr>
+augroup END
