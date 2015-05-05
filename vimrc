@@ -22,6 +22,12 @@ set nu
 " set spacing to use spaces, not tabs, 4 spaces per indent
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
+" alternate spacing in some languages
+augroup beziSpacing
+    au!
+    au FileType sml,javascript,coffee set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
+
 " 256 terminal colors to be supa pretty
 set t_Co=256
 
@@ -162,3 +168,17 @@ map 0 ^
 " centering macros to make searching a pleasure
 nmap n nzz
 nmap N Nzz
+
+" add a nifty macro or two for latex
+augroup beziLatex
+    au!
+    au FileType tex noremap <buffer> <leader>m :!cd %:h && if [ -f Makefile ]; then make; else pdflatex %; fi<cr>
+    au FileType tex noremap <buffer> <leader>v :silent !evince %:r.pdf 2>/dev/null &<cr>
+augroup END
+
+" SML goodies
+augroup beziSML
+    au!
+    au BufRead,BufNewFile *.sig setlocal filetype=sml
+    au FileType sml setlocal commentstring=(*%s*)
+augroup END
