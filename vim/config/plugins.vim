@@ -1,35 +1,44 @@
-" @file vimrc
-" @brief Installs all the other files in the config structure.
-" @author Oscar Bezi
-" @since 5 June 2014
+" @file plugins.vim
+" @brief Pulls in all of the plugin files with Vundle.
+" @author Oscar Bezi, oscar@bezi.io
+" @since 5 May 2015
 "===============================================================================
 
 "-------------------------------------------------------------------------------
-" Plugins
+" Initialise Vundle and runtimepath
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/plugins.vim
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "-------------------------------------------------------------------------------
-" Base configurations
+" Vundle
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/base.vim
+Plugin 'gmarik/Vundle.vim'
 
 "-------------------------------------------------------------------------------
-" Leader key mappings
+" Autocomplete plugins
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/leader.vim
+runtime config/plugins-autocomplete.vim
 
 "-------------------------------------------------------------------------------
-" Navigation configs
+" Color and hilighting plugins
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/nav.vim
+runtime config/plugins-color.vim
 
 "-------------------------------------------------------------------------------
-" Search configs
+" Exhuberant CTags plugins
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/search.vim
+runtime config/plugins-tags.vim
 
 "-------------------------------------------------------------------------------
-" Language-specific utilities
+" Miscellaneous plugins
 "-------------------------------------------------------------------------------
-source $HOME/.vim/config/lang.vim
+runtime config/plugins-misc.vim
+
+"-------------------------------------------------------------------------------
+" Finish vundle initialisation
+"-------------------------------------------------------------------------------
+call vundle#end()
+filetype plugin indent on
