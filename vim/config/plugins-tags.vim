@@ -12,7 +12,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
 " where to put the tags
-set tags=./.vimtags;,~/.vimtags
+set tags=./.vimtags
 
 " generate tags on file read/write
 let g:easytags_events = ['BufReadPost', 'BufWritePost']

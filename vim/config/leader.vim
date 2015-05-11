@@ -19,6 +19,9 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<cr>
 " Toggle the sidebar for the plugin tagbar
 nmap <silent> <leader>b :TagbarToggle<cr>
 
+" Toggle files with A.vim
+nmap <silent> <leader>a :A<cr>
+
 " First, clear trailing whitespace from all lines using the better-whitespace
 " plugin.  Then, remove all repeated newlines in a file.
 " TODO: make this smarter in python files so it doesn't break pep8

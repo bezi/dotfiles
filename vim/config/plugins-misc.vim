@@ -5,15 +5,9 @@
 "===============================================================================
 
 "-------------------------------------------------------------------------------
-" VimCommentary: Tim Pope presents: toggling comments on a given selection.
+" A: Alternate between .h and .cpp files quickly
 "-------------------------------------------------------------------------------
-Plugin 'tpope/vim-commentary'
-
-"-------------------------------------------------------------------------------
-" GitGutter: If a file is in a git repository, shows a column on the side with
-" diff information.
-"-------------------------------------------------------------------------------
-Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/a.vim'
 
 "-------------------------------------------------------------------------------
 " DelimitMate: Provides the 'autoclose' functionality that many editors have for
@@ -33,6 +27,21 @@ augroup beziDelimitMate
     au!
     au FileType markdown let b:loaded_delimitMate = 1
 augroup END
+
+"-------------------------------------------------------------------------------
+" GitGutter: If a file is in a git repository, shows a column on the side with
+" diff information.
+"-------------------------------------------------------------------------------
+Plugin 'airblade/vim-gitgutter'
+
+"-------------------------------------------------------------------------------
+" Hardmode: Makes it harder to spam hjlk keys, forcing me to break that habit
+" and use proper motions like {,t,f,w, etc.
+"-------------------------------------------------------------------------------
+Plugin 'takac/vim-hardtime'
+
+" turn it on all the time
+let g:hardtime_default_on = 1
 
 "-------------------------------------------------------------------------------
 " Syntastic: Syntax checking on file save, it's a lifesaver for the small
@@ -68,12 +77,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " Auto-enable
 let g:nerdtree_tabs_open_on_console_startup = 1
-
 "-------------------------------------------------------------------------------
-" Hardmode: Makes it harder to spam hjlk keys, forcing me to break that habit
-" and use proper motions like {,t,f,w, etc.
+" VimCommentary: Tim Pope presents: toggling comments on a given selection.
 "-------------------------------------------------------------------------------
-Plugin 'takac/vim-hardtime'
+Plugin 'tpope/vim-commentary'
 
-" turn it on all the time
-let g:hardtime_default_on = 1

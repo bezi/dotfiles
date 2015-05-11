@@ -46,6 +46,10 @@ set scrolloff=3
 
 " smarter indenting
 set autoindent
+set smartindent
+
+" load filetype specific indentation
+filetype indent on
 
 " show (partial) command in the last line of the screen
 set showcmd
@@ -86,7 +90,7 @@ set formatoptions=qrn2tcoj
 " save whenever you lose focus
 augroup beziAutoSave
     au!
-    au FocusLost * :wa <CR>
+    au FocusLost * :wa
 augroup END
 
 " remap jj to escape for easier times

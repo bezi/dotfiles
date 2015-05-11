@@ -29,6 +29,14 @@ augroup beziCoffee
     au FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup END
 
+
+"-------------------------------------------------------------------------------
+" HTML
+"-------------------------------------------------------------------------------
+
+" indentation fix
+let g:html_indent_inctags = "body,head,p"
+
 "-------------------------------------------------------------------------------
 " JAVASCRIPT
 "-------------------------------------------------------------------------------
@@ -40,6 +48,18 @@ augroup beziJS
     au FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup END
 
+"-------------------------------------------------------------------------------
+" MATLAB
+"-------------------------------------------------------------------------------
+
+augroup beziMatlab
+    au!
+
+    " Have matlab reload files on change
+    au FileType matlab setlocal autoread
+    au FocusGained,BufEnter * checktime
+
+augroup END
 "-------------------------------------------------------------------------------
 " SMLNJ
 "-------------------------------------------------------------------------------

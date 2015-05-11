@@ -44,3 +44,12 @@ fi
 if [ -f /afs/club.cc.cmu.edu/contrib/etc/bashrc ]; then
     source /afs/club.cc.cmu.edu/contrib/etc/bashrc;
 fi
+
+# MStar Python Repository Links
+# Delete this if you move repo, then rerun install.sh from seq_comp
+PYTHONPATH=$PYTHONPATH:/home/bezi/biorobotics/mstar;
+PYTHONPATH=$PYTHONPATH:/home/bezi/biorobotics/mstar/utils;
+PYTHONPATH=$PYTHONPATH:/home/bezi/biorobotics/mstar/od;
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/bezi/biorobotics/mstar/seq_comp/tracker/aruco-1.2.5/build/src/;
+export PYTHONPATH;
+export LD_LIBRARY_PATH;
