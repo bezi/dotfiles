@@ -13,6 +13,7 @@ try
     colorscheme molokai
 catch
     " Don't do anything, just supress the 'colorscheme doesn't exist' error.
+    colorscheme blue
 endtry
 
 " line numbering
