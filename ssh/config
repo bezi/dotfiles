@@ -3,7 +3,10 @@
 # @since 6 June 2014
 #===============================================================================
 
-# saves sessions for 10 minutes for speedy reconnect
+# pipe multiple connections to a host through one port, speeding up the process
+# also, saves sessions for 10 minutes for speedy reconnect
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
 ControlPersist 10m
 
 # aliases
