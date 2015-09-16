@@ -30,7 +30,7 @@ function bash_prompt {
     fi
 
     PROMPT="${STATUS}${GIT}"
-    # PROMPT="${PROMPT}${BCyan}${USER}${BWhite}@${BCyan}${HOSTNAME}"
+    PROMPT="${PROMPT}${BWhite}[${BYellow}${HOSTNAME}${BWhite}] "
     PROMPT="${PROMPT}${LOCATION}${BCyan}λ ${Color_Off}";
 
     # overwrite instances of .github.io with character, makes it shorter
