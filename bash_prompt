@@ -26,15 +26,15 @@ function bash_prompt {
     fi
 
     if [ "${PWD}" != "${HOME}" ]; then
-        LOCATION="${BBlue} > ${BYellow}${PWD##*/}";
+        LOCATION="${BCyan}> ${BGreen}${PWD##*/} ";
     fi
 
     PROMPT="${STATUS}${GIT}"
-    PROMPT="${PROMPT}${BYellow}${USER}${BWhite}@${BYellow}${HOSTNAME}"
-    PROMPT="${PROMPT}${LOCATION} ${BBlue}λ ${Color_Off}";
+    # PROMPT="${PROMPT}${BCyan}${USER}${BWhite}@${BCyan}${HOSTNAME}"
+    PROMPT="${PROMPT}${LOCATION}${BCyan}λ ${Color_Off}";
 
     # overwrite instances of .github.io with character, makes it shorter
-    PROMPT="${PROMPT//.github.io/.ᘠ}";
+    PROMPT="${PROMPT//.github.io/.ϼ}";
     printf "$PROMPT";
 }
 

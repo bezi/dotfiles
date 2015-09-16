@@ -32,6 +32,10 @@ alias tmux='tmux -2';
 alias smlnj='rlwrap sml'
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 
+# SML
+export PATH=$PATH:/usr/lib/smlnj/bin/
+export SMLNJ_HOME=/usr/lib/smlnj
+
 # adds a location to the ~/.bash_locations
 function add_loc {
     local NAME="$1";

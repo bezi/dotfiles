@@ -17,7 +17,7 @@ bindsym $mod+Return exec xterm
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -p ">" -i -fn "Menlo for Powerline:size=12"
+bindsym $mod+d exec dmenu_run -p "λ" -i -fn "Menlo for Powerline:size=10" -l 500 -o 0.8 -dim 0.8 -dc "#262626" -r -sb "#1d9099"
 
 # change focus
 # now matches vim!
@@ -71,11 +71,25 @@ bar {
     position top
     font xft:Menlo for Powerline 10
     status_command ~/.i3/conky-i3bar.sh
+    colors {
+        background #262626
+        focused_workspace #1d9099 #1d9099 #ffffff
+        active_workspace #1d9099 #262626 #ffffff
+        inactive_workspace #262626 #262626 #ffffff
+        urgent_workspace #d53a33 #262626 #ffffff
+    }
+
+    tray_output none
 }
 
 # set bg image
-exec --no-startup-id feh --bg-fill ~/.i3/bg.jpg
 exec --no-startup-id compton --config ~/.config/compton.conf
+
+# color override
+client.focused #d53a33 #1d9099 #ffffff #e79c10
+client.focused_inactive #d53a33 #373737 #ffffff #e79c10
+client.unfocused #d53a33 #373737 #ffffff #e79c10
+client.urgent #d53a33 #d53a33 #ffffff #e79c10
 
 # gaps specific stuff
 new_window pixel 3

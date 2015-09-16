@@ -9,6 +9,9 @@ ControlMaster auto
 ControlPath /tmp/%r@%h:%p
 ControlPersist 10m
 
+# Send a ping every 15 seconds to prevent disconnect.
+ServerAliveInterval 15
+
 # aliases
 # biorobotics lab
 host modsnake

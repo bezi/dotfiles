@@ -9,7 +9,7 @@
 "-------------------------------------------------------------------------------
 " YouCompleteMe: Provides the autocomplete engine
 "-------------------------------------------------------------------------------
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " default to autocomplete on
 let g:ycm_filetype_whitelist = { '*': 1 }
