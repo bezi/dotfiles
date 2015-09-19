@@ -39,12 +39,12 @@ host unix
 hostname unix.bezi.io
 user bezi
 
-# dev.bezi.io
-host dev
-hostname dev.bezi.io
-user bezi
-
 # prod.bezi.io
 host prod
 hostname prod.bezi.io
+user bezi
+
+# chicago.club.cc.cmu.edu
+host sl-cmu
+hostname chicago.club.cc.cmu.edu
 user bezi
