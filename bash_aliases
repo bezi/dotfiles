@@ -32,6 +32,9 @@ alias tmux='tmux -2';
 alias smlnj='rlwrap sml'
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 
+# :)
+alias nyan="telnet nyancat.dakko.us"
+
 # SML
 export PATH=$PATH:/usr/lib/smlnj/bin/
 export SMLNJ_HOME=/usr/lib/smlnj
