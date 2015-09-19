@@ -23,6 +23,8 @@ port 7531
 host andrew
 hostname unix.andrew.cmu.edu
 user odb
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
 
 # CMU computer club
 host cclub
