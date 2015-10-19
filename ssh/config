@@ -46,7 +46,7 @@ host prod
 hostname prod.bezi.io
 user bezi
 
-# chicago.club.cc.cmu.edu
+# Scottylabs UNIX
 host sl-cmu
-hostname chicago.club.cc.cmu.edu
+hostname scottylabs-cmu.club.cc.cmu.edu
 user bezi
