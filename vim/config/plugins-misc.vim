@@ -41,7 +41,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'takac/vim-hardtime'
 
 " turn it on all the time
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 
 "-------------------------------------------------------------------------------
 " Syntastic: Syntax checking on file save, it's a lifesaver for the small

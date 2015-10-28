@@ -2,7 +2,8 @@
 # useful bash aliases
 # @file ~/.bash_aliases
 # @author Oscar Bezi (oscar@bezi.io)
-# @since  5 June 2014 #===============================================================================
+# @since  5 June 2014
+#===============================================================================
 
 # navigation shortcuts
 alias ..='cd ../';
@@ -32,9 +33,13 @@ alias tmux='tmux -2';
 alias smlnj='rlwrap sml'
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 
-# SML
-export PATH=$PATH:/usr/lib/smlnj/bin/
-export SMLNJ_HOME=/usr/lib/smlnj
+# 410 stuff
+PATH="/afs/cs.cmu.edu/academic/class/15410-f15/bin:${PATH}"; export PATH
+# _os m_ake
+alias osm='make && simics46 kernel';
+
+# I'm a lazy fuck
+alias o='osm'
 
 # adds a location to the ~/.bash_locations
 function add_loc {
