@@ -36,24 +36,32 @@ alias hg='history | grep'; # like I'm gonna use mercurial lol
 # :)
 alias nyan="telnet nyancat.dakko.us"
 
-# SML
-export PATH=$PATH:/usr/lib/smlnj/bin/
-export SMLNJ_HOME=/usr/lib/smlnj
+# Machine-specific configs.
+case "$HOSTNAME" in
 
-# Open up a new OS session.
-alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
-# os is one too many characters.
-alias o="os";
+    'unix'[0123456789]'.andrew.cmu.edu')
+        aklog cs.cmu.edu;
 
+        # 410 stuff
+        PATH="/afs/cs.cmu.edu/academic/class/15410-f15/bin:${PATH}"; export PATH
 
-# 410 stuff
-PATH="/afs/cs.cmu.edu/academic/class/15410-f15/bin:${PATH}"; export PATH
+        # _os m_ake
+        alias osm='make && simics46 kernel';
+        alias o='osm'
+        ;;
 
-# _os m_ake
-alias osm='make && simics46 kernel';
+    "zeus-arch")
+        # SML
+        export PATH=$PATH:/usr/lib/smlnj/bin/
+        export SMLNJ_HOME=/usr/lib/smlnj
+        ;& # fall through
 
-# I'm a lazy fuck
-alias o='osm'
+    *)
+        # Open up a new OS session.
+        alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
+        alias o="os";
+        ;;
+esac
 
 # adds a location to the ~/.bash_locations
 function add_loc {
