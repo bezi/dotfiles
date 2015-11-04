@@ -5,9 +5,10 @@
 
 set -e;
 
-wget https://thoughtbot.github.io/rcm/debs/rcm_1.3.0-1_all.deb;
-sudo dpkg -i rcm_1.3.0-1_all.deb;
-rm rcm_1.3.0-1_all.deb;
+FILE="rcm_1.2.3-1_all.deb";
+wget https://thoughtbot.github.io/rcm/debs/${FILE};
+sudo dpkg -i ${FILE};
+rm ${FILE};
 git clone https://github.com/bezi/dotfiles.git ~/.dotfiles;
 cd .dotfiles;
 export RCRC=`pwd`/rcrc; # make rcm use the rcrc you just downloaded for now.
