@@ -11,8 +11,7 @@
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
-" where to put the tags
-set tags=./.vimtags
+set tags=~/.vimtags
 
 " generate tags on file read/write
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
@@ -21,7 +20,7 @@ let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 
 " put the tags in ./.vimtags file
-let g:easytags_dynamic_files = 2
+let g:easytags_dynamic_files = 0
 
 " because sometimes I need to use symlinks on the tagfiles
 let g:easytags_resolve_links = 1
