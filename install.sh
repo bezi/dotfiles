@@ -1,6 +1,9 @@
+#!/bin/bash
 # @file install.sh
 # @brief In theory, install all the stuff in this directory.  It's never that easy though :(.
 # @author Oscar Bezi (oscar@bezi.io)
+
+set -e;
 
 wget https://thoughtbot.github.io/rcm/debs/rcm_1.3.0-1_all.deb;
 sudo dpkg -i rcm_1.3.0-1_all.deb;
