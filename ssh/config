@@ -23,6 +23,8 @@ port 7531
 host andrew
 hostname unix.andrew.cmu.edu
 user odb
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
 
 # CMU computer club
 host cclub
@@ -39,12 +41,12 @@ host unix
 hostname unix.bezi.io
 user bezi
 
-# dev.bezi.io
-host dev
-hostname dev.bezi.io
-user bezi
-
 # prod.bezi.io
 host prod
 hostname prod.bezi.io
+user bezi
+
+# Scottylabs UNIX
+host sl-cmu
+hostname scottylabs-cmu.club.cc.cmu.edu
 user bezi
