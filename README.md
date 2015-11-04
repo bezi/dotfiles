@@ -7,9 +7,9 @@ installation
 ------------
 - Install RCM
 ```
-wget https://thoughtbot.github.io/rcm/debs/rcm_1.2.3-1_all.deb;
-sudo dpkg -i rcm_1.2.3-1_all.deb;
-rm rcm_1.2.3-1_all.deb;
+wget https://thoughtbot.github.io/rcm/debs/rcm_1.3.0-1_all.deb;
+sudo dpkg -i rcm_1.3.0-1_all.deb;
+rm rcm_1.3.0-1_all.deb;
 ```
 
 Or install with non-dpkg systems [here](https://github.com/thoughtbot/rcm).
@@ -32,5 +32,3 @@ git submodule update --init --recursive; # get submodules
 lsrc;
 rcup;
 ```
-
-For best results, also install [Sauce Code Powerline](https://github.com/Lokaltog/powerline-fonts/tree/master/SourceCodePro) for vim.
