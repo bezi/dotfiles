@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Disable mouse acceleration
+Exec=xset m 0 0
+Type=Application

@@ -35,15 +35,6 @@ augroup END
 Plugin 'airblade/vim-gitgutter'
 
 "-------------------------------------------------------------------------------
-" Hardmode: Makes it harder to spam hjlk keys, forcing me to break that habit
-" and use proper motions like {,t,f,w, etc.
-"-------------------------------------------------------------------------------
-Plugin 'takac/vim-hardtime'
-
-" turn it on all the time
-let g:hardtime_default_on = 1
-
-"-------------------------------------------------------------------------------
 " Syntastic: Syntax checking on file save, it's a lifesaver for the small
 " mistakes I make all the time.  Will alert me to mistakes before compilation.
 "-------------------------------------------------------------------------------
