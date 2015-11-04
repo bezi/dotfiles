@@ -2,7 +2,8 @@
 # useful bash aliases
 # @file ~/.bash_aliases
 # @author Oscar Bezi (oscar@bezi.io)
-# @since  5 June 2014 #===============================================================================
+# @since  5 June 2014
+#===============================================================================
 
 # navigation shortcuts
 alias ..='cd ../';
@@ -39,6 +40,21 @@ alias nyan="telnet nyancat.dakko.us"
 export PATH=$PATH:/usr/lib/smlnj/bin/
 export SMLNJ_HOME=/usr/lib/smlnj
 
+# Open up a new OS session.
+alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
+# os is one too many characters.
+alias o="os";
+
+
+# 410 stuff
+PATH="/afs/cs.cmu.edu/academic/class/15410-f15/bin:${PATH}"; export PATH
+
+# _os m_ake
+alias osm='make && simics46 kernel';
+
+# I'm a lazy fuck
+alias o='osm'
+
 # adds a location to the ~/.bash_locations
 function add_loc {
     local NAME="$1";
@@ -53,11 +69,6 @@ function add_loc {
 function locs {
     cat ~/.bash_locations  | sed -e "/^#/d" -e "s/='cd /::/" -e "s/';//" | awk '{print $2}'
 }
-
-# Open up a new OS session.
-alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
-# os is one too many characters.
-alias o="os";
 
 # colour shortcuts, courtesy of ArchWiki
 # Reset

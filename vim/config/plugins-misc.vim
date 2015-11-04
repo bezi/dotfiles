@@ -68,6 +68,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " Auto-enable
 let g:nerdtree_tabs_open_on_console_startup = 1
+
 "-------------------------------------------------------------------------------
 " VimCommentary: Tim Pope presents: toggling comments on a given selection.
 "-------------------------------------------------------------------------------
