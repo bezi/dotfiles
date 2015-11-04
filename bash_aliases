@@ -54,6 +54,11 @@ function locs {
     cat ~/.bash_locations  | sed -e "/^#/d" -e "s/='cd /::/" -e "s/';//" | awk '{print $2}'
 }
 
+# Open up a new OS session.
+alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
+# os is one too many characters.
+alias o="os";
+
 # colour shortcuts, courtesy of ArchWiki
 # Reset
 Color_Off='\[\e[0m\]'       # Text Reset
