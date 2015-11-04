@@ -31,6 +31,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases;
 fi
 
+# load host specific cmds.
+if [ -f ~/.bash_hosts ]; then
+    . ~/.bash_hosts;
+fi
+
 # load location shortcuts
 if [ -f ~/.bash_locations ]; then
     . ~/.bash_locations;
