@@ -78,6 +78,11 @@ set laststatus=2
 
 " change line numbering to be relative to current line, to make commands easier
 set relativenumber
+augroup beziRelative
+    au!
+    au WinEnter * :set relativenumber
+    au WinLeave * :set relativenumber!
+augroup END
 
 " text-wrapping
 set wrap
