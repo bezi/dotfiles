@@ -32,6 +32,7 @@ alias dotfiles_reload='cd ~/.dotfiles; gpull; rcup; reload; vim_reload; cd --;';
 alias tmux='tmux -2';
 alias smlnj='rlwrap sml'
 alias hg='history | grep'; # like I'm gonna use mercurial lol
+alias lsc='tree -P "*.c"';
 
 # :)
 alias nyan="telnet nyancat.dakko.us"
