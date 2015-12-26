@@ -16,6 +16,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Keithbsmiley/tmux.vim'
 Plugin 'cypok/vim-sml'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 "-------------------------------------------------------------------------------
 " Molokai: a nice color scheme
