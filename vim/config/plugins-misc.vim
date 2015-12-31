@@ -44,6 +44,8 @@ Plugin 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 " LaTeX warnings are very prolific, so it's not too helpful to have on all the
 " time.
 augroup beziSyntastic
@@ -70,7 +72,11 @@ Plugin 'jistr/vim-nerdtree-tabs'
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 "-------------------------------------------------------------------------------
+" Surround: Easy quoting!
+"-------------------------------------------------------------------------------
+Plugin 'tpope/vim-surround'
+
+"-------------------------------------------------------------------------------
 " VimCommentary: Tim Pope presents: toggling comments on a given selection.
 "-------------------------------------------------------------------------------
 Plugin 'tpope/vim-commentary'
-

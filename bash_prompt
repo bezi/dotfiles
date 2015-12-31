@@ -29,7 +29,15 @@ function bash_prompt {
         LOCATION="${BCyan}> ${BGreen}${PWD##*/} ";
     fi
 
-    PROMPT="${STATUS}${GIT}"
+    STOPPED=`jobs | wc -l`;
+    if [[ "${STOPPED}" != "1" ]]; then
+        NUM=$((${STOPPED} - 1));
+        STOPPED="${BWhite}[${BCyan}${NUM}${BWhite}]";
+    else 
+        STOPPED="";
+    fi
+
+    PROMPT="${STATUS}${STOPPED}${GIT}"
     PROMPT="${PROMPT}${BWhite}[${BYellow}${HOSTNAME}${BWhite}] "
     PROMPT="${PROMPT}${LOCATION}${BCyan}λ ${Color_Off}";
 
