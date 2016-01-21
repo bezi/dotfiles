@@ -29,9 +29,9 @@ function bash_prompt {
         LOCATION="${BCyan}> ${BGreen}${PWD##*/} ";
     fi
 
-    STOPPED=`jobs | wc -l`;
-    if [[ "${STOPPED}" != "1" ]]; then
-        NUM=$((${STOPPED} - 1));
+    STOPPED=`jobs | grep "Stopped" | wc -l`;
+    if [[ "${STOPPED}" != "0" ]]; then
+        NUM=${STOPPED};
         STOPPED="${BWhite}[${BCyan}${NUM}${BWhite}]";
     else 
         STOPPED="";

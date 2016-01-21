@@ -77,6 +77,16 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 Plugin 'tpope/vim-surround'
 
 "-------------------------------------------------------------------------------
+" Repeat: Tim Pope saves the day.
+"-------------------------------------------------------------------------------
+Plugin 'tpope/vim-repeat'
+
+"-------------------------------------------------------------------------------
+" Scratch: A nice scratch buffer.
+"-------------------------------------------------------------------------------
+Plugin 'mtth/scratch.vim'
+
+"-------------------------------------------------------------------------------
 " VimCommentary: Tim Pope presents: toggling comments on a given selection.
 "-------------------------------------------------------------------------------
 Plugin 'tpope/vim-commentary'
