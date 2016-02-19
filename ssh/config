@@ -21,10 +21,13 @@ port 7531
 
 # CMU andrew
 host andrew
-hostname unix.andrew.cmu.edu
+hostname unix2.andrew.cmu.edu
 user odb
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
+ForwardX11 yes
+Compression yes
+Ciphers blowfish-cbc,aes128-cbc,3des-cbc,cast128-cbc,arcfour,aes192-cbc,aes256-cbc
 
 # CMU computer club
 host cclub

@@ -60,6 +60,7 @@ augroup beziMatlab
     au FocusGained,BufEnter * checktime
 
 augroup END
+
 "-------------------------------------------------------------------------------
 " SMLNJ
 "-------------------------------------------------------------------------------
@@ -75,4 +76,13 @@ augroup beziSML
 
     " Two space tabs
     au FileType sml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
+
+"-------------------------------------------------------------------------------
+" SMLNJ
+"-------------------------------------------------------------------------------
+augroup beziPython
+    au!
+
+    au FileType python noremap <silent> <F5> :!clear; python %;<CR>
 augroup END

@@ -30,9 +30,12 @@ alias reload='source ~/.bashrc';
 alias vim_reload='vim +PluginClean +PluginInstall +qall';
 alias dotfiles_reload='cd ~/.dotfiles; gpull; rcup; reload; vim_reload; cd --;';
 alias tmux='tmux -2';
-alias smlnj='rlwrap sml'
+alias smlnj='rlwrap sml';
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 alias lsc='tree -P "*.c"';
+
+# A bit specific, but a lifesaver for latex.
+alias watch_tex='nodemon --exec "pdflatex"';
 
 # :)
 alias nyan="telnet nyancat.dakko.us"
