@@ -12,6 +12,7 @@ font xft:Menlo for Powerline 8
 
 # Start the best term
 bindsym $mod+Return exec xterm
+bindsym $mod+Tab exec google-chrome
 
 # kill focused window
 bindsym $mod+Shift+q kill
