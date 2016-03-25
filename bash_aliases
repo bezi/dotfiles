@@ -36,6 +36,7 @@ alias lsc='tree -P "*.c"';
 
 # A bit specific, but a lifesaver for latex.
 alias watch_tex='nodemon --exec "pdflatex"';
+alias watch_sml='nodemon --exec "smlnj -m"';
 
 # :)
 alias nyan="telnet nyancat.dakko.us"
