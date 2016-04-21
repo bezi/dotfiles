@@ -33,7 +33,7 @@ function bash_prompt {
     if [[ "${STOPPED}" != "0" ]]; then
         NUM=${STOPPED};
         STOPPED="${BWhite}[${BCyan}${NUM}${BWhite}]";
-    else 
+    else
         STOPPED="";
     fi
 

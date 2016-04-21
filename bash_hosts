@@ -11,25 +11,17 @@ case "$HOSTNAME" in
 
     # CMU Unix serevers.
     'unix'[0123456789]'.andrew.cmu.edu')
-        # 410 stuff
-        PATH="/afs/cs.cmu.edu/academic/class/15410-f15/bin:${PATH}"; export PATH
-
-        # _os m_ake
-        alias osm='make && simics46 kernel';
-        alias o='osm'
         ;;
 
     # Linux Desktop
     "zeus-arch")
-        # SML
+        # SML setup.
         export PATH=$PATH:/usr/lib/smlnj/bin/
         export SMLNJ_HOME=/usr/lib/smlnj
         ;& # fallthrough
 
     # Everyone else
     *)
-        # Open up a new OS session.
-        alias os="ssh -Y -t andrew \"p3; clear; ls; bash\"";
-        alias o="os";
+        # alias example="This will go to all servers that aren't specified!"
     ;;
 esac
