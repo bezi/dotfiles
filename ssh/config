@@ -13,18 +13,10 @@ ControlPersist 10m
 ServerAliveInterval 15
 
 # aliases
-# biorobotics lab
-host modsnake
-hostname fuego.sbp.ri.cmu.edu
-user odb
-port 7531
-
 # CMU andrew
 host andrew
 hostname unix2.andrew.cmu.edu
 user odb
-GSSAPIAuthentication yes
-GSSAPIDelegateCredentials yes
 ForwardX11 yes
 Compression yes
 Ciphers blowfish-cbc,aes128-cbc,3des-cbc,cast128-cbc,arcfour,aes192-cbc,aes256-cbc
@@ -32,11 +24,6 @@ Ciphers blowfish-cbc,aes128-cbc,3des-cbc,cast128-cbc,arcfour,aes192-cbc,aes256-c
 # CMU computer club
 host cclub
 hostname unix.club.cc.cmu.edu
-user odb
-
-# 213 Shark machines
-host shark
-hostname carpetshark.ics.cs.cmu.edu
 user odb
 
 # unix.bezi.io
@@ -52,4 +39,9 @@ user bezi
 # Scottylabs UNIX
 host sl-cmu
 hostname scottylabs-cmu.club.cc.cmu.edu
+user bezi
+
+# Hebi Robotics
+host hebi
+hostname unix.hebi.us
 user bezi
