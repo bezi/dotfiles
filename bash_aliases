@@ -35,11 +35,19 @@ alias hg='history | grep'; # like I'm gonna use mercurial lol
 alias lsc='tree -P "*.c"';
 
 # A bit specific, but a lifesaver for latex.
-alias watch_tex='nodemon --exec "pdflatex"';
 alias watch_sml='nodemon --exec "smlnj -m"';
+
+function watch_tex {
+    PDF_VIEWER="zathura";
+    touch ${1/%.tex/.pdf}
+    ${PDF_VIEWER} ${1/%.tex/.pdf} &
+    nodemon --exec "pdflatex" ${1}
+}
 
 # :)
 alias nyan="telnet nyancat.dakko.us"
+
+alias 440="ssh -Y -t andrew \"p2; clear; ls; bash\"";
 
 # adds a location to the ~/.bash_locations
 function add_loc {
