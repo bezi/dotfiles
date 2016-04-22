@@ -67,10 +67,11 @@ function upload_to_github {
     KEY=$(cat ~/.ssh/id_rsa.pub)
     DATA=$(echo "{\"title\":\"${TITLE}\",\"key\":\"${KEY}\"}");
 
-    echo -n "Generating GitHub key identifier => ${BOLD}${TITLE}${RESET}\n"
+    echo -e "Generating GitHub key identifier => ${BOLD}${TITLE}${RESET}\n"
     echo -en '\t Select another one, or hit enter to accept: '
     read new_title
 
+    # If no input is entered...
     if [[ -z "${new_title// }"  ]]; then
         echo -e "\t Using generated key."
     else
