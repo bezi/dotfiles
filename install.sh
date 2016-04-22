@@ -12,7 +12,7 @@ cd ~/;
 
 # Set it to your github user account.
 GH_USER=bezi;
-DOTFILES_DIR='.dotfiles-test';
+DOTFILES_DIR='.dotfiles';
 
 BOLD=$(tput bold)
 ERR=$(tput setaf 1)$(tput bold)
