@@ -109,7 +109,9 @@ function deploy_dotfiles {
     cd ${DOTFILES_DIR};
     export RCRC=`pwd`/rcrc; # make rcm use the rcrc you just downloaded for now.
     git submodule update --init --recursive; # get submodules
-    rcup;
+
+    # This will overwrite previously existing files with no mercy.
+    yes | rcup;
 }
 
 # Don't want to install files if they're already installed!
