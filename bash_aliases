@@ -33,16 +33,12 @@ alias tmux='tmux -2';
 alias smlnj='rlwrap sml';
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 alias lsc='tree -P "*.c"';
-alias see_project='tree -I "node_modules*|.git*" -a -h -C';
+alias see_project='tree -I "node_modules*|.git*" -a -h -C --dirsfirst';
 
-# A bit specific, but a lifesaver for latex.
 alias watch_sml='nodemon --exec "smlnj -m"';
 
 function watch_tex {
-    PDF_VIEWER="zathura";
-    touch ${1/%.tex/.pdf}
-    ${PDF_VIEWER} ${1/%.tex/.pdf} &
-    nodemon --exec "pdflatex" ${1}
+    nodemon --exec "make" -e "tex"
 }
 
 # :)
