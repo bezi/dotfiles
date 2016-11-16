@@ -34,6 +34,7 @@ alias smlnj='rlwrap sml';
 alias hg='history | grep'; # like I'm gonna use mercurial lol
 alias lsc='tree -P "*.c"';
 alias see_project='tree -I "node_modules*|.git*" -a -h -C --dirsfirst';
+alias update_me='sudo apt-get update -q && sudo apt-get upgrade -q -y';
 
 alias watch_sml='nodemon --exec "smlnj -m"';
 
