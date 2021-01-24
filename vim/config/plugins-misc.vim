@@ -9,6 +9,10 @@
 "-------------------------------------------------------------------------------
 Plugin 'vim-scripts/a.vim'
 
+" For React components.
+let g:alternateExtensions_js = "scss"
+let g:alternateExtensions_scss = "js"
+
 "-------------------------------------------------------------------------------
 " DelimitMate: Provides the 'autoclose' functionality that many editors have for
 " parens and brackets.

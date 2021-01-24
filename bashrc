@@ -7,6 +7,7 @@
 # add local directory to the PATH
 export PATH="$PATH:.";
 export PATH="$HOME/bin:$PATH";
+export PATH="$HOME/.local/bin:$PATH";
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth;

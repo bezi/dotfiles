@@ -13,19 +13,6 @@ ControlPersist 10m
 ServerAliveInterval 15
 
 # aliases
-# CMU andrew
-host andrew
-hostname unix2.andrew.cmu.edu
-user odb
-ForwardX11 yes
-Compression yes
-Ciphers blowfish-cbc,aes128-cbc,3des-cbc,cast128-cbc,arcfour,aes192-cbc,aes256-cbc
-
-# CMU computer club
-host cclub
-hostname unix.club.cc.cmu.edu
-user odb
-
 # unix.bezi.io
 host unix
 hostname unix.bezi.io
@@ -34,14 +21,4 @@ user bezi
 # prod.bezi.io
 host prod
 hostname prod.bezi.io
-user bezi
-
-# Scottylabs UNIX
-host sl-cmu
-hostname scottylabs-cmu.club.cc.cmu.edu
-user bezi
-
-# Hebi Robotics
-host hebi
-hostname unix.hebi.us
 user bezi

@@ -116,3 +116,6 @@ set nobackup
 
 " remap 0 to first non-empty character
 map 0 ^
+
+" Use ":w!!" to save files using sudo
+cmap w!! w !sudo tee > /dev/null %
